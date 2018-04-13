@@ -106,5 +106,5 @@ def villa404(error):
 def villa500(error):
     return template('v7/error',villa="Error 500 Villa í forriti")
 
-#run(host="0.0.0.0", port=os.environ.get('PORT'), app=app)
-run(host='localhost', port=80, app=app, debug=True, reloader=True)
+run(host="0.0.0.0", port=os.environ.get('PORT'), app=app)
+#run(host='localhost', port=80, app=app, debug=True, reloader=True)
