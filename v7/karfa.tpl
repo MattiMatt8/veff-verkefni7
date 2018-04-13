@@ -9,7 +9,7 @@
 <div class="container">
 	%heildarVerd = 0
 	%for vara in karfa:
-	e<div class="utanum">
+	<div class="utanum">
 		<h2>
 			{{vara["Magn"]}} x {{vara["Vörunafn"]}} =
 			%voruVerd = vorur[vara["Reytur"]]["Verð"] * vara["Magn"]
