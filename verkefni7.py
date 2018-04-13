@@ -86,6 +86,21 @@ def eyda():
     s.delete()
     return template("./v7/villa2",villa="Öllu hefur verið eytt úr körfunni")
 
+@route('/lidur2/eyda/<heiti>')
+def eydaV(heiti):
+    s = request.environ.get('beaker.session')
+    if s.get("Karfa"):
+        for x in range(len(s["Karfa"])):
+            if s["Karfa"][x]["Vörunafn"] == heiti:
+                del s["Karfa"][x]
+                s.save()
+                return redirect("/lidur2/karfa")
+                break
+        else:
+            return template("./v7/villa2",villa="Vara ekki til í körfu")
+    else:
+        return template("./v7/villa2",villa="Ekkert í körfunni")
+
 @route('/lidur2/karfa')
 def karfa():
     s = request.environ.get('beaker.session')
