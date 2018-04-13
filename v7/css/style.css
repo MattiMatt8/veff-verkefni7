@@ -51,3 +51,7 @@ input[type="submit"]:hover{
     background-color:#b4b4b4;
     color: #000;
 }
+.utanum{
+    display: flex;
+    justify-content: row;
+}
